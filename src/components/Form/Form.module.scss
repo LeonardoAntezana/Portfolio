@@ -1,0 +1,56 @@
+.form{
+    padding: 4rem 0 0 0 ;
+    max-width: 40rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    h3{
+        text-align: center;
+    }
+    .conteiner__input{
+        width: 100%;
+        input{
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        textarea{
+            width: 100%;
+            resize: none;
+            font-size: 1.2rem;
+        }
+        p{
+            width: max-content;
+            background-color: red;
+            padding: 4px;
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+        }
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        button{
+            background-color: #ddc5a4;
+            font-size: 1rem;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-radius: 1rem;
+            border: none;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #F2D0A4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form{
+        span{
+            button:hover{
+                cursor: default
+            }
+        }
+    }
+}

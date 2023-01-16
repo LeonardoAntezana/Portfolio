@@ -1,0 +1,81 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 0;
+    transition: all 0.5s ease-in-out;
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        .logo{
+            border-radius: 50%;
+            width: 2rem;
+            background-color: #fff;
+        }
+        .list__container{
+            display: none;
+            gap: 1rem;
+            .item__list{
+                font-size: 1.4rem;
+                padding: 0 1rem;
+                a{
+                    color: #fff;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: #8cc3b3;
+                    }
+                }
+            }
+        }
+        .toggleButton{
+            background-color: rgb(230, 194, 194);
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hamburguer__menu{
+            .list__hamburguer{
+                background-color: rgba(36, 76, 64);
+                color: #fff;
+                font-size: 1.3rem;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 3.5rem;
+                left: 0;
+                right: 0;
+                transition: all 0.3s ease-in-out;
+                li{
+                    padding: 1rem 0;
+                    text-align: center;
+                    border-top: 1px solid black;
+                    a{
+                        cursor:default;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+   .navbar{
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        .list__container{
+            display: flex;
+            align-items: center;
+        }
+        
+        .hamburguer__menu{
+            display: none;
+        } 
+    }
+   }
+}

@@ -1,0 +1,46 @@
+.container__about{
+    margin: 6rem 0;
+    padding: 6rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    .container__info{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        .container__photo{
+            flex: 1 1 400px;
+            max-height: 700px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-top-right-radius: 25%;
+                border-bottom-left-radius: 25%;
+            }
+        }
+        .aside{
+            flex: 1 1 300px;
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            p{
+                text-align: justify;
+                line-height: 2.5rem;
+            }
+            .container__skills{
+                h3{
+                    text-align: center;
+                    margin: 2rem 0;
+                    text-decoration: underline;
+                }
+                .container__logos{
+                    display: flex;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}

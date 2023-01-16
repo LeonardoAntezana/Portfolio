@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&family=Ramabhadra&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Mohave', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+.App{
+    position: relative;
+    padding-top: 5rem;
+    min-height: 100vh;
+    transition: all 0.5s ease-in-out;
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: #244C40;
+    color: #fff;
+}
+
+input, textarea{
+    outline: none;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+
+.Toastify__toast-body{
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 600px){
+    a:-webkit-any-link {
+        cursor: default;
+    }
+}

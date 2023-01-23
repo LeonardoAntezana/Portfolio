@@ -1,7 +1,7 @@
 import imageQuizz from '../../assets/image-quizz.png'
 import imageNotes from '../../assets/image-notes.png'
 import imageLumus from '../../assets/lumus.png'
-import imageCalc from  '../../assets-image-calculator.png'
+import imageCalc from  '../../assets/image-calculator.png'
 import Project from '../Proyect/Project'
 import styles from './Projects.module.scss'
 

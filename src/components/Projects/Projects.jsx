@@ -1,6 +1,7 @@
 import imageQuizz from '../../assets/image-quizz.png'
 import imageNotes from '../../assets/image-notes.png'
 import imageLumus from '../../assets/lumus.png'
+import imageCalc from  '../../assets-image-calculator.png'
 import Project from '../Proyect/Project'
 import styles from './Projects.module.scss'
 
@@ -11,8 +12,11 @@ const Projects = () => {
     },
     {name: 'Notes App', deploy: 'https://notes-app-antezana.netlify.app/', image: imageNotes,
     tecs: ['html','javascript','react', 'sass'], repo:'https://github.com/LeonardoAntezana/NotesApp-React.git'},
-    {name: 'Lumus E-commerce', deploy: 'https://app.netlify.com/sites/lumus-antezana/settings/general', image: imageLumus,
+    {name: 'Lumus E-commerce', deploy: 'https://lumus-antezana.netlify.app/', image: imageLumus,
     tecs: ['html','javascript','react', 'bootstrap', 'redux'], repo: 'https://github.com/LeonardoAntezana/E-commerce-React.git'
+    },
+    {name: 'Calculator App', deploy: 'https://calculator-app-antezana.netlify.app/', image: imageCalc,
+    tecs: ['html','javascript','react'], repo: 'https://github.com/LeonardoAntezana/calcultor-app.git'
     }
   ]
   return (

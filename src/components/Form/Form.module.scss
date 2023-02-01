@@ -30,8 +30,8 @@
     span{
         display: flex;
         justify-content: center;
-        button{
-            background-color: #ddc5a4;
+        .button__light{
+            background-color: #03314e47;
             font-size: 1rem;
             padding: 1rem 1.5rem;
             cursor: pointer;
@@ -39,7 +39,14 @@
             border: none;
             transition: all 0.3s ease-in-out;
             &:hover{
-                background-color: #F2D0A4;
+                background-color: rgb(3 49 78 / 44%);
+            }
+        }
+        .button__night{
+            @extend .button__light;
+            background-color: #fff;
+            &:hover{
+                background-color:gray;
             }
         }
     }

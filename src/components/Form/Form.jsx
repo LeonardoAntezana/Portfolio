@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { toast } from 'react-toastify'
 import styles from './Form.module.scss'
 
@@ -6,6 +7,7 @@ const Form = () => {
   const [mail, setMail] = useState({content: '', error: false})
   const [asunto, setAsunto] = useState({content: '', error: false})
   const [content, setContent] = useState({content: '', error: false})
+  const stateMod = useSelector((state) => state.toggleMod.value)
 
   let val =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/
   let whiteS = /\S/
@@ -58,7 +60,7 @@ const Form = () => {
         {content.error && <p>Campo erróneo</p>}
       </div>
       <span>
-        <button>Enviar</button>
+        <button className={stateMod ? styles.button__night : styles.button__light}>Enviar</button>
       </span>
     </form>
   )

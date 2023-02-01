@@ -1,4 +1,5 @@
 .navbar{
+    background-color: #335249d1;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +32,7 @@
             }
         }
         .toggleButton{
-            background-color: rgb(230, 194, 194);
+            background-color: #fff;
             padding: 0.5rem;
             border-radius: 50%;
             display: flex;
@@ -40,27 +41,34 @@
         }
         .hamburguer__menu{
             .list__hamburguer{
-                background-color: rgba(36, 76, 64);
+                background-color: #335249d1;
                 color: #fff;
                 font-size: 1.3rem;
                 position: absolute;
                 display: flex;
                 flex-direction: column;
-                top: 3.5rem;
+                top: 3.75rem;
                 left: 0;
                 right: 0;
-                transition: all 0.3s ease-in-out;
+                transition: all 0.5s ease-in-out;
                 li{
                     padding: 1rem 0;
                     text-align: center;
-                    border-top: 1px solid black;
                     a{
                         cursor:default;
                     }
                 }
             }
+            .list__hamburguer__night{
+                @extend .list__hamburguer;
+                background-color: rgb(36,37,38, 0.9);
+            }
         }
     }
+}
+.navbar__night{
+    @extend .navbar;
+    background-color: rgb(36,37,38, 0.9);
 }
 
 @media screen and (min-width: 900px) {

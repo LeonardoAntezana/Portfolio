@@ -7,7 +7,7 @@ const Project = ({proj}) => {
   const {name, deploy, image, tecs, repo} = proj
   const stateMode = useSelector((state) => state.toggleMod.value)
   return (
-    <div style={{backgroundColor: `${stateMode ? 'rgb(36,76,64, 0.9)': 'rgb(236, 207, 169)'}`}} className={styles.project}>
+    <div className={stateMode ? styles.project__night : styles.project}>
       <h3>{name}</h3>
       <div className={styles.container__image}>
         <img src={image} alt={`image-${name}`} />

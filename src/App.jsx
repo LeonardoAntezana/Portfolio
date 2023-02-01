@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   const stateMode = useSelector((state) => state.toggleMod.value)
   return (
-    <div style={{backgroundColor: `${stateMode ? 'rgb(36,37,38, 0.9)': '#fff'}`, color: `${stateMode ? '#fff': 'black'}`}} className={styles.App}>
+    <div className={stateMode ? styles.App__night : styles.App}>
       <div className={styles.container}>
         <Navbar/>
         <Hero/>

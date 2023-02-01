@@ -19,6 +19,7 @@ li{
 }
 
 .App{
+    background-color: #e0e4ce;
     position: relative;
     padding-top: 5rem;
     min-height: 100vh;
@@ -28,6 +29,12 @@ li{
         max-width: 1200px;
         margin: auto;
     }
+}
+
+.App__night{
+    @extend .App;
+    background-color: rgb(36,37,38, 0.9);
+    color: #fff;
 }
 
 a{
@@ -40,7 +47,7 @@ h2{
     text-transform: uppercase;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    background-color: #244C40;
+    background-color:#335249d1;
     color: #fff;
 }
 

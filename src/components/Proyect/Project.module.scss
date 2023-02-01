@@ -1,4 +1,5 @@
 .project{
+    background-color:#03314e47;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -48,6 +49,11 @@
         }
     }
 }
+.project__night{
+    @extend .project;
+    background-color: rgb(32, 33, 34);
+}
+
 
 @media screen and (max-width: 600px){
     .project{

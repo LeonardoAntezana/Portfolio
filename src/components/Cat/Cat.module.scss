@@ -1,0 +1,226 @@
+
+.container__gato{
+    display: none;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    .cara{
+        position: absolute;
+        right: 35px;
+        top: 130px;
+        z-index: 2;
+        background: radial-gradient(circle, rgba(97,86,84,1) 12%, rgba(69,67,66,1) 97%);
+        height: 170px;
+        width: 190px;
+        border-radius: 54% 46% 50% 50% / 56% 55% 45% 44%;
+        .ojos{
+            position: absolute;
+            display: flex;
+            gap: 3rem;
+            right: 37px;
+            top: 55px;
+            .ojo{
+                background-color: rgba(69,67,66,1);
+                width: 30px;
+                height: 25px;
+                border-radius: 15px;
+                transition: all 0.4s ease-in-out;
+            }
+            .ojo__left{
+                @extend .ojo;
+                position: relative;
+                background-color: rgb(212,187,78);
+                z-index: 1;
+                .parpado{
+                    background-color: rgba(69,67,66,1);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 11px;
+                    transition: all 0.4s ease-in;
+                    .iris{
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background-color: black;
+                        top: 5px;
+                        z-index: -1;
+                    }
+                    
+                }
+                
+                .parpado__open{
+                    @extend .parpado;
+                    bottom: 15px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+        .nariz{
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: rosybrown;
+            border-radius: 54% 46% 50% 50% / 63% 71% 29% 37% ;
+            bottom: 70px;
+            right: 80px;
+            z-index: 1;
+        }
+        .conexion{
+            position: absolute;
+            width: 4px;
+            height: 15px;
+            background-color: rgba(69,67,66,1);
+            right: 88px;
+            bottom: 55px;
+        }
+        
+        .labio{
+            position: absolute;
+            height: 30px;
+            width: 35px;
+            bottom: 52px;
+            right: 90px;
+            border-bottom: 4px solid rgba(69,67,66,1);
+            border-bottom-left-radius: 12px;
+        }
+        
+        .labio__right{
+            @extend .labio;
+            right: 56px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 12px;
+        }
+        
+    }
+    .orejas{
+        top: 105px;
+        position: absolute;
+        right: 45px;
+        z-index: 1;
+        display: flex;
+        gap: 3rem;
+    }
+    
+    .oreja{
+        position: relative;
+        height: 50px;
+        width: 57px;
+        border-radius: 51% 49% 50% 50% / 100% 100% 0% 0%;
+        background: linear-gradient(180deg, rgba(68,65,65,1) 0%, rgba(103,88,85,1) 100%);
+        transform: rotate(-20deg);
+        &__right{
+            @extend .oreja;
+            transform: rotate(20deg);
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: rosybrown;
+            height: 40px;
+            width: 40px;
+            top: 13px;
+            left: 8px;
+            border-radius: 51% 49% 50% 50% / 100% 100% 0% 0%;
+        }
+    }
+    
+    .cuerpo{
+        position: absolute;
+        background: linear-gradient(90deg, rgba(78,67,65,1) 8%, rgba(89,82,78,1) 39%, rgba(78,73,72,1) 64%);
+        right: 50px;
+        top: 100px;
+        width: 500px;
+        height: 215px;
+        border-radius: 43% 57% 86% 14% / 67% 79% 21% 33%;
+        &::before{
+            position: absolute;
+            top: 10px;
+            left: 40px;
+            height: 180px;
+            width: 250px;
+            content: '';
+            background: linear-gradient(90deg, rgba(78,67,65,1) 8%, rgba(84,77,74,1) 94%);
+            border-radius: 43% 57% 86% 14% / 67% 79% 21% 33%;
+        }
+    }
+    
+    .cola{
+        position: absolute;
+        background: linear-gradient(90deg, rgba(78,67,65,1) 5%, rgba(45,37,37,1) 93%);
+        bottom: 70px;
+        right: 270px;
+        width: 250px;
+        height: 50px;
+        border-radius:82% 18% 57% 43% / 33% 44% 56% 67%  ;
+    }
+    .patas{
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        right: 6%;
+        bottom: 80px;
+        z-index: 2;
+        .pata{
+            position: relative;
+            background-color: white;
+            display: flex;
+            gap: 1rem;
+            height: 45px;
+            width: 65px;
+            border-radius: 54% 46% 50% 50% / 69% 68% 32% 31% ;
+        }
+        .pata__right{
+            @extend .pata;
+            margin-top: 5px;
+        }
+    }
+    .dedo{
+        position: absolute;
+        width: 4px;
+        height: 15px;
+        background-color: black;
+        bottom: 0;
+        left: 20px;
+    }
+    .dedo__right{
+        @extend .dedo;
+        left: 42px;
+    }
+    
+}
+
+// ANIMACION RESPIRACION DE GATO 
+
+@keyframes respiracion{
+    0%{
+        transform: scale(1.1);
+    }
+    25%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    75%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 900px){
+    .container__gato{
+        display: block;
+        .cuerpo::before{
+            animation-name: respiracion;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+    }
+}

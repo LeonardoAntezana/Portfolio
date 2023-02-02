@@ -14,14 +14,14 @@ const Navbar = () => {
   return (
     <nav className={stateMode ? styles.navbar__night : styles.navbar}>
       <div className={styles.container}>
-        <span className={styles.logo}></span>
+        <span className={styles.logo}>LA</span>
         <ul className={styles.list__container}>
           {list.map((elem, index) => <li className={styles.item__list} key={index}><a href={`#${elem.toLowerCase()}`}>{elem}</a></li>)}
         </ul>
-        <span className={styles.toggleButton}>
+        <span className={styles.toggleButton} onClick={()=> dispatch(changeMode())}>
           {stateMode 
-          ? <BsFillMoonStarsFill cursor='pointer' color='#171839' size={17} onClick={()=> dispatch(changeMode())}/> 
-          : <BsFillSunFill cursor='pointer' color='yellow' size={17} onClick={()=> dispatch(changeMode())}/>}
+          ? <BsFillMoonStarsFill color='#171839' size={17}/> 
+          : <BsFillSunFill color='yellow' size={17}/>}
         </span>
         <div className={styles.hamburguer__menu}>
           <div className={styles.menu}>

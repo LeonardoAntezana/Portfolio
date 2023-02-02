@@ -12,9 +12,12 @@
         display: flex;
         justify-content: space-around;
         .logo{
-            border-radius: 50%;
-            width: 2rem;
+            width: 3rem;
+            text-align: center;
+            font-size: 2rem;
+            padding: 8px 0;
             background-color: #fff;
+            transition: color 0.3s ease-in-out;
         }
         .list__container{
             display: none;
@@ -36,9 +39,11 @@
             background-color: #fff;
             padding: 0.5rem;
             border-radius: 50%;
+            width: 3rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         .hamburguer__menu{
             .list__hamburguer{
@@ -48,7 +53,7 @@
                 position: absolute;
                 display: flex;
                 flex-direction: column;
-                top: 3.6rem;
+                top: 5.3rem;
                 left: 0;
                 right: 0;
                 transition: all 0.5s ease-in-out;
@@ -77,6 +82,10 @@
     .container{
         max-width: 1200px;
         margin: auto;
+        .logo:hover{
+            color: #8cc3b3;
+            cursor: pointer;
+        }
         .list__container{
             display: flex;
             align-items: center;

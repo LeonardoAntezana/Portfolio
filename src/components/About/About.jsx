@@ -16,7 +16,7 @@ const About = () => {
         </div>
         <div className={styles.aside}>
           <p>Hola! Me llamo Leonardo Antezana, soy estudiante de Ingenieria en informática en la Universidad Nacional
-          Arturo Jauretche. A mediados de 2021, comencé la carrera de Front End Developer en Coderhouse y finalice la misma 
+          Arturo Jauretche. A mediados de 2022, comencé la carrera de Front End Developer en Coderhouse y finalice la misma 
           a finales del mismo año. Aun asi, sigo practicando y aprendiendo de forma autodidacta para aumentar mis conocimientos. 
           Mi objetivo actual es obtener mi primer empleo como programador, ganar experiencia y seguir por el lado del backend.  
           </p>

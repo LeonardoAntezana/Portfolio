@@ -46,6 +46,8 @@
             cursor: pointer;
         }
         .hamburguer__menu{
+            display: flex;
+            align-items: center;
             .list__hamburguer{
                 background-color: #335249d1;
                 color: #fff;

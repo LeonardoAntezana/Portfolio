@@ -33,7 +33,8 @@ const Navbar = () => {
             <RiMenuFill color='#fff' cursor='pointer' onClick={() => setMenuState(state => !state)} size={28}/>
           </div>
           <ul style={{transform: `${menuState ? 'translateX(0%)': 'translateX(100%)'}`}} className={stateMode ? styles.list__hamburguer__night : styles.list__hamburguer}>
-            {list.map((elem, index) => <li onClick={() => setMenuState(false)} key={index}><a href={`#${elem.toLowerCase().trim()}`}>{elem}</a></li>)}
+            {list.map((elem, index) => <li key={index}><a href={`#${elem.toLowerCase().trim()}`} onClick={() => setMenuState(false)}>{elem}</a></li>)}
+            <ButtonDownload text='Descargar CV' archivo={cv} width='max-content' margin='0px 0px 16px 0px'/>
           </ul>
         </div>
       </div>

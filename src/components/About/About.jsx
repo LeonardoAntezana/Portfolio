@@ -1,4 +1,4 @@
-import myPhoto from '../../assets/photo.jpg'
+import myPhoto2 from '../../assets/photo.jpg'
 import styles from './About.module.scss'
 import { AiFillHtml5 } from 'react-icons/ai'
 import { IoLogoCss3 } from 'react-icons/io'
@@ -12,7 +12,7 @@ const About = () => {
       <h2>Sobre mi</h2>
       <div className={styles.container__info}>
         <div className={styles.container__photo}>
-          <img src={myPhoto} alt="Picture-User" />
+          <img src={myPhoto2} alt="Picture-User" />
         </div>
         <div className={styles.aside}>
           <p>Hola! Me llamo Leonardo Antezana, soy estudiante de Ingenieria en informática en la Universidad Nacional

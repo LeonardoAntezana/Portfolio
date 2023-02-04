@@ -15,8 +15,9 @@
             img{
                 width: 100%;
                 height: 100%;
-                border-top-right-radius: 25%;
-                border-bottom-left-radius: 25%;
+                object-fit: cover;
+                border-top-right-radius: 10rem;
+                border-bottom-left-radius: 10rem;
             }
         }
         .aside{

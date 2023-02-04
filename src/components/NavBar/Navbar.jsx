@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { changeMode } from '../../redux/states/state_toggle_button'
+import ButtonDownload from '../ButtonDownload/ButtonDownload'
 import { RiMenuFill } from 'react-icons/ri'
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
+import cv from '../../assets/_Curriculum-AntezanaLeonardo.pdf'
 
 import styles from './Navbar.module.scss'
 
@@ -18,11 +20,14 @@ const Navbar = () => {
         <ul className={styles.list__container}>
           {list.map((elem, index) => <li className={styles.item__list} key={index}><a href={`#${elem.toLowerCase()}`}>{elem}</a></li>)}
         </ul>
-        <span className={styles.toggleButton} onClick={()=> dispatch(changeMode())}>
-          {stateMode 
-          ? <BsFillMoonStarsFill color='#171839' size={17}/> 
-          : <BsFillSunFill color='yellow' size={17}/>}
-        </span>
+        <div className={styles.containerNavbar__right}>
+          <ButtonDownload text='Descargar CV' archivo={cv}/>
+          <span className={styles.toggleButton} onClick={()=> dispatch(changeMode())}>
+            {stateMode 
+            ? <BsFillMoonStarsFill color='#171839' size={20}/> 
+            : <BsFillSunFill color='yellow' size={20}/>}
+          </span>
+        </div>
         <div className={styles.hamburguer__menu}>
           <div className={styles.menu}>
             <RiMenuFill color='#fff' cursor='pointer' onClick={() => setMenuState(state => !state)} size={28}/>

@@ -2,9 +2,6 @@
 
 html{
     scroll-behavior: smooth;
-}
-
-body{
     font-family: 'Mohave', sans-serif;
 }
 
@@ -60,15 +57,12 @@ h2{
 }
 
 input, textarea{
+    font-family: 'Mohave', sans-serif;
     outline: none;
+    border: 1px solid #335249d1;
     padding: 1rem;
     border-radius: 4px;
 }
-
-input:valid{
-    border: 1px solid green;
-}
-
 
 .Toastify__toast-body{
     font-size: 2rem;
